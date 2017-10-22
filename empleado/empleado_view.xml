@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<openerp>
+  <data>
+    <record model="ir.ui.view" id="view_empleado_tree">
+      <field name="name">empleado.tree</field>
+      <field name="model">empleado.empleado</field>
+      <field name="arch" type="xml">
+        <tree string="Listar Empleados">
+          <field name="id_empleado"/>
+          <field name="fecha_ingreso"/>
+          <field name="nombre"/>
+          <field name="apellidos"/>
+          <field name="direccion"/>
+          <field name="dni"/>
+          <field name="email"/>
+          <field name="categoria"/>
+          <field name="salario"/>
+          <field name="fecha_valoracion"/>
+          <field name="valoracion"/>
+        </tree>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="view_empleado_form">
+      <field name="name">empleado.form</field>
+      <field name="model">empleado.empleado</field>
+      <field name="arch" type="xml">
+         <form string="Nuevo registro" version="7.0">
+          <sheet>
+            <group>
+              <field name="id_empleado"/>
+      				<field name="fecha_ingreso"/>
+      				<field name="nombre"/>
+      				<field name="apellidos"/>
+      				<field name="direccion"/>
+      				<field name="dni"/>
+      				<field name="email"/>
+      				<field name="categoria"/>
+      				<field name="salario"/>
+      				<field name="fecha_valoracion"/>
+      				<field name="valoracion"/>
+            </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="action_open_view_empleado_form">
+      <field name="name">empleado</field>
+      <field name="res_model">empleado.empleado</field>
+      <field name="view_type">form</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem name="Empresa" id="menu_empleado_form" action="action_open_view_empleado_form" sequence="15"/>
+    <menuitem name="Empleados" id="menu_empleado" parent="menu_empleado_form" sequence="1"/>
+    <menuitem name="Listar" id="listar_empleado" parent="menu_empleado" action="action_open_view_empleado_form" sequence="2"/>
+  </data>
+</openerp>

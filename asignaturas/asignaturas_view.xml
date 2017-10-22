@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<openerp>
+  <data>
+    <!--Contruimos la Vista lista - Tree View -->
+    <record model="ir.ui.view" id="view_asignaturas_tree">
+      <field name="name">asignaturas.tree</field>
+      <field name="model">asignaturas.asignaturas</field>
+      <field name="arch" type="xml">
+        <tree string="Listar de registro">
+          <field name="asignaturas"/>
+          <field name="profesor"/>
+          <field name="alumno"/>
+          <field name="curso"/>
+          <field name="nota"/>
+          <field name="n_Eval"/>
+          <field name="fecha_eva"/>
+          <field name="anotaciones"/>
+        </tree>
+      </field>
+    </record>
+
+    <!-- Construimos la Vista formulario - Form View -->
+    <record model="ir.ui.view" id="view_asignaturas_form">
+      <field name="name">asignaturas.form</field>
+      <field name="model">asignaturas.asignaturas</field>
+      <field name="arch" type="xml">
+        <form string="Nuevo registro" version="7.0">
+          <sheet>
+            <group>
+              <field name="asignaturas"/>
+              <field name="profesor"/>
+              <field name="alumno"/>
+              <field name="curso"/>
+              <field name="nota"/>
+              <field name="n_Eval"/>
+              <field name="fecha_eva"/>
+              <field name="anotaciones"/>
+            </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+    <!-- Definimos una accion para disparar el formulario , cuando hagamos clic en el menu   -->
+    <record model="ir.actions.act_window" id="action_open_view_asignaturas_form">
+      <field name="name">Profesores</field>
+      <field name="res_model">asignaturas.asignaturas</field>
+      <field name="view_type">form</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+    <!-- Definimos el nombre del menu padre , este ira en la parte superior de openerp -->
+    <menuitem name="Profesores" id="menu_asignaturas_form" action="action_open_view_asignaturas_form" sequence="15"/>
+
+    <!-- Lo siguiente es el menu hijo , que tambien se llama asignaturas -->
+    <menuitem name="Profesores" id="menu_asignaturas" parent="menu_asignaturas_form" sequence="2"/>
+
+    <!-- El siguiente menu "Lista nombres", listara los registro guardados en la tabla "nombres"  -->
+    <menuitem name="Boletin" id="boletin" parent="menu_asignaturas" action="action_open_view_asignaturas_form" sequence="7"/>
+
+  </data>
+</openerp>
