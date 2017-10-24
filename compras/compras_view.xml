@@ -6,16 +6,16 @@
       <field name="name">compras.tree</field>
       <field name="model">compras.compras</field>
       <field name="arch" type="xml">
-      <tree string="Listar Compras">
-        <field name="n_pedido"/>
-        <field name="fecha_p"/>
-        <field name="producto"/>
-        <field name="categoria"/>
-        <field name="ud"/>
-        <field name="pvp"/>
-        <field name="total"/>
-        <field name="observaciones"/>
-      </tree>
+        <tree string="Listar Compras">
+          <field name="n_pedido"/>
+          <field name="fecha_p"/>
+          <field name="producto"/>
+          <field name="categoria"/>
+          <field name="ud"/>
+          <field name="pvp"/>
+          <field name="total"/>
+          <field name="observaciones"/>
+        </tree>
       </field>
     </record>
 

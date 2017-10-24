@@ -1,4 +1,4 @@
-## encoding: utf-8 -*-
+# encoding: utf-8 -*-
 
 {
     "name": "Empleados",
@@ -13,7 +13,7 @@
         "base",
         "web",
     ],
-    "data":[
+    "data": [
         "empleado_view.xml",
     ],
     "empleado_xml": [

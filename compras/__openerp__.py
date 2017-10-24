@@ -1,4 +1,4 @@
-## encoding: utf-8 -*-
+# encoding: utf-8 -*-
 
 {
     "name": "Compras",
@@ -11,7 +11,7 @@
         "base",
         "web",
     ],
-    "data":[
+    "data": [
         "compras_view.xml",
     ],
     "compras_xml": [

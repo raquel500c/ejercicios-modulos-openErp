@@ -26,20 +26,20 @@
       <field name="name">empleado.form</field>
       <field name="model">empleado.empleado</field>
       <field name="arch" type="xml">
-         <form string="Nuevo registro" version="7.0">
+        <form string="Nuevo registro" version="7.0">
           <sheet>
             <group>
               <field name="id_empleado"/>
-      				<field name="fecha_ingreso"/>
-      				<field name="nombre"/>
-      				<field name="apellidos"/>
-      				<field name="direccion"/>
-      				<field name="dni"/>
-      				<field name="email"/>
-      				<field name="categoria"/>
-      				<field name="salario"/>
-      				<field name="fecha_valoracion"/>
-      				<field name="valoracion"/>
+              <field name="fecha_ingreso"/>
+              <field name="nombre"/>
+              <field name="apellidos"/>
+              <field name="direccion"/>
+              <field name="dni"/>
+              <field name="email"/>
+              <field name="categoria"/>
+              <field name="salario"/>
+              <field name="fecha_valoracion"/>
+              <field name="valoracion"/>
             </group>
           </sheet>
         </form>
